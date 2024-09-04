@@ -1,0 +1,10 @@
+.notecard{
+    background-color: green;
+}
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #939393;
+
+    background-color: #191919;
+}
