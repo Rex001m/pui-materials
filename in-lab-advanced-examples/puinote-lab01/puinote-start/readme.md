@@ -252,7 +252,7 @@ What else can we try?
 
 24. Add the following property to `notecard-left`:
 ```
-    flex-grow: 1:
+    flex-grow: 1;
 ```
 
 The `flex-grow` property applies only to flex children, and determines how they will behave when there is extra space around them. Since we set `flex-grow` to `1`, the `notecard-left` element will try to expand into the unused space. Looks good!
@@ -273,7 +273,7 @@ Luckily, there is a simple fix here!
 
 25. Add the following property to `notecard-right`:
 ```
-    flex-shrink: 0:
+    flex-shrink: 0;
 ```
 
 Finally, we've solved our sidebar problem. Adding `flex-shrink: 0` will prevent `notecard-right` from shrinking below its specified width of 30 pixels.
