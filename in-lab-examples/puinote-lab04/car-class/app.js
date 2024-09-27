@@ -6,9 +6,16 @@ class Car {
    * isMoving - boolean indicating whether the car is moving (default false)
    * element - the HTML element that this car will update
    */
+model;
+year;
+isMoving=false;
+element;
 
   constructor(model, year, element) {
     /* Initialize the car's properties here */
+    this.model=model;
+    this.year=year;
+    this.element=element;
   }
 
   /**
@@ -19,14 +26,24 @@ class Car {
    */
   updateElement() {
     // implement this
+    this.element.innerText(this.model+""+this.year)
+    if(this.isMoving){
+      this.element.innerText +=" is driving";
+    }else{
+      this.element.classlist.remove('moving car');
+    }
   }
 
   drive() {
     // implement this
+    this.isMoving=true;
+    this.updateElement();
   }
 
   brake() {
     // implement this
+    this.isMoving=false;
+    this.updateElement();
   }
 }
 
@@ -35,5 +52,5 @@ class Car {
  model "Chevy Corvette", the year "2022", and the car element. Then call
  updateElement().
 */
-let carElement = null; // implement
+let carElement = document.querySelector(".car"); // implement
 let theCar = null; // implement
